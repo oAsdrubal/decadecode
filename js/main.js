@@ -1,26 +1,27 @@
-// Prevent variables from being global      
-(function () {
-
-    /*
-        1. Inject CSS which makes iframe invisible
-    */
-  
-  var div = document.createElement('div'),
-      ref = document.getElementsByTagName('base')[0] || 
-            document.getElementsByTagName('script')[0];
-
-  div.innerHTML = '&shy;<style> iframe { visibility: hidden; } </style>';
-
-  ref.parentNode.insertBefore(div, ref);
-
-      
-  /*
-      2. When window loads, remove that CSS, 
-         making iframe visible again
-  */
-  
-  window.onload = function() {
-      div.parentNode.removeChild(div);
+$(document).ready(function(){
+    $( ".mini-card" ).hover(
+        function() {
+        $("#i"+ $(this).attr('id')).css("color", "#3c6e71");
+        $(this).addClass('transitionCard');
+        }, function() {
+        $("#i"+ $(this).attr('id')).css("color", "#353535");
+        $(this).removeClass('transitionCard');
+        }
+    );
+});
+function scrollOnPageLoad() {
+    // to top right away
+    if (window.location.hash) scroll(0, 0);
+    // void some browsers issue
+    setTimeout(scroll(0, 0), 2);
+    var hashLink = window.location.hash;
+      if ($(hashLink).length) {
+        $(function () {
+            // *only* if we have anchor on the url
+            // smooth scroll to the anchor id
+            $('html, body').animate({
+              scrollTop: $(window.location.hash).offset().top - 100
+            }, 100);
+        });
+      }
   }
-  
-})();
