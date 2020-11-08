@@ -33,7 +33,9 @@
     50% {opacity:.6;}
     100% {opacity: 1;}
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-image: url(../img/bg.png);
     background-size: cover;
@@ -48,7 +50,7 @@ body{
     animation: fadein 2s;
 }
 h1{
-    font-size: 7em;
+    font-size: xxx-large;
 }
 .quick-info{
     animation: fadein 1.3s;
@@ -58,13 +60,28 @@ h1{
     color: white;
 }
 .card{
+    background-color: rgba(255,255,255,0.9);
     padding: 16px;
+    margin: 10px;
+    box-shadow: 10px 10px 20px 10px rgba(0,0,0,.05);
 }
-.current-text{
-    font-family: 'Montserrat', sans-serif;   
-    font-weight: bolder; 
-    color: #353535;
+.mini-card{
+    -webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
 }
+/* On mouse-over, add a deeper shadow */
+.mini-card:hover {
+    box-shadow: 10px 10px 20px 10px rgba(0,0,0,.1);
+  }
+  .transitionCard {
+    -webkit-transform: scale(1.1); 
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .avatar{
     padding: 25px;
 }
