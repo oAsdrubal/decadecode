@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @keyframes fadein{
     0% {opacity:.1;}
     20% {opacity: .3;}
@@ -33,12 +34,18 @@
     50% {opacity:.6;}
     100% {opacity: 1;}
 }
+a{
+    color: #353535;
+}
+a:hover{
+    color: #353535;
+}
 html{
     scroll-behavior: smooth;
 }
 body{
     background-image: url(../img/bg.png);
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 .navbar{
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0);
@@ -59,8 +66,17 @@ h1{
     letter-spacing: 3px;
     color: white;
 }
-.card{
+.transparent{
     background-color: rgba(255,255,255,0.9);
+}
+.alignCenter{
+    align-self: center;
+}
+.cardText{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+.card{
     padding: 16px;
     margin: 10px;
     box-shadow: 10px 10px 20px 10px rgba(0,0,0,.05);
@@ -81,7 +97,9 @@ h1{
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
-
+.illustration{
+    max-width: inherit;
+}
 .avatar{
     padding: 25px;
 }
