@@ -1,13 +1,18 @@
 $(document).ready(function(){
-    $( ".mini-card" ).hover(
-        function() {
-        $("#i"+ $(this).attr('id')).css("color", "#3c6e71");
-        $(this).addClass('transitionCard');
-        }, function() {
-        $("#i"+ $(this).attr('id')).css("color", "#353535");
-        $(this).removeClass('transitionCard');
-        }
-    );
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1LV1MGWNHV');
+
+  $( ".mini-card" ).hover(
+      function() {
+      $("#i"+ $(this).attr('id')).css("color", "#3c6e71");
+      $(this).addClass('transitionCard');
+      }, function() {
+      $("#i"+ $(this).attr('id')).css("color", "#353535");
+      $(this).removeClass('transitionCard');
+      }
+  );
 });
 function scrollOnPageLoad() {
     // to top right away
@@ -25,3 +30,4 @@ function scrollOnPageLoad() {
         });
       }
   }
+   
