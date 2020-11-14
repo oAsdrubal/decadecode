@@ -44,8 +44,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-image: url(../img/bg.png);
+    background-image: url(../img/bg.png) ;
     background-repeat: no-repeat;
+    background-position-x: center;
 }
 .navbar{
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0);
